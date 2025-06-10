@@ -13,9 +13,9 @@ function loadLanguageFile() {
 
     if (!currentLang) {
         if (userLang.startsWith('pt-br')) {
-            window.location.href = './pt-br.html';
+            window.location.href = '/pt';
         } else {
-            window.location.href = './en.html';
+            window.location.href = '/en';
         }
     }
 }
