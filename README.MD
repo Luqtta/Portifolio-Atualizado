@@ -1,33 +1,34 @@
-# Projeto de Site para Estrategista Digital
+# Portfólio de Lucas Morais Souza
 
-Este projeto consiste em um **site desenvolvido para uma estrategista digital**, com foco em oferecer uma plataforma interativa, otimizada e moderna para promover os serviços de consultoria estratégica e atrair novos clientes. Utilizando as tecnologias mais recentes, o site proporciona uma **experiência de usuário fluida**, **responsiva** e **intuitiva**, além de contar com um **sistema de tradução automática** que adapta o conteúdo ao idioma preferido do usuário.
+Este projeto é um **portfólio profissional desenvolvido para Lucas Morais Souza**, com o objetivo de apresentar suas habilidades, experiências, projetos e serviços de forma moderna, interativa e responsiva. O site oferece uma experiência multilíngue, adaptando automaticamente o idioma conforme a preferência do usuário.
 
 ## Tecnologias Utilizadas
 
-- **HTML** – Estruturação básica da página.
-- **CSS** – Estilos básicos do layout.
-- **Tailwind CSS** – Framework de CSS para um design altamente customizável e responsivo.
-- **JavaScript** – Funcionalidades interativas no front-end.
-- **Node.js** – Backend para manipulação de dados e servidores.
+- **HTML5** – Estruturação semântica das páginas.
+- **CSS3** – Estilização customizada e responsiva.
+- **Tailwind CSS** – Framework utilitário para design rápido e responsivo.
+- **JavaScript** – Funcionalidades interativas e animações.
+- **GSAP** – Biblioteca para animações avançadas.
+- **Boxicons** – Ícones modernos para UI.
+- **Google Fonts (Poppins)** – Tipografia elegante e legível.
+
+## Funcionalidades
+
+- **Layout moderno e responsivo**: Compatível com dispositivos móveis e desktops.
+- **Seção de projetos**: Exibe principais projetos com links e imagens.
+- **Skills técnicas e soft skills**: Destaque para competências profissionais.
+- **Ferramentas utilizadas**: Lista de ferramentas e tecnologias dominadas.
+- **Botão de copiar e-mail**: Facilidade para contato rápido.
+- **Tradução automática**: Redirecionamento inteligente para português ou inglês conforme o idioma do navegador.
+- **Animações suaves**: Transições e efeitos visuais com GSAP.
+- **Acessibilidade**: Estrutura semântica e navegação facilitada.
 
 ## Preview
 
-![Image](https://github.com/user-attachments/assets/3051149e-1b41-4d8f-955b-a223a1701650)
+![Preview Desktop](https://github.com/user-attachments/assets/83f1be75-67ff-470f-8430-70a29fa55412))
 
 ## Preview Responsivo
 
-![Image](https://github.com/user-attachments/assets/d533ee9d-cba2-4bcc-91f4-870848c40d3f)
+![Preview Mobile](https://github.com/user-attachments/assets/d533ee9d-cba2-4bcc-91f4-870848c40d3f)
 
-## Descrição do Projeto
-
-O site foi desenvolvido com foco em **eficiência e otimização**, proporcionando uma interface fluida e adaptável a diferentes dispositivos. A utilização de **Tailwind CSS** facilita a criação de layouts responsivos e de fácil manutenção, enquanto o **Node.js** permite uma integração dinâmica com os usuários. A combinação de **SCSS** e **JavaScript** possibilita maior flexibilidade no design e interatividade do site.
-
-### Principais Funcionalidades
-
-- **Layouts modernos e responsivos** com o uso de **Tailwind CSS**.
-- **Serviços de consultoria digital** detalhados, permitindo uma visão clara das estratégias oferecidas.
-- **Sistema de tradução automática**, permitindo que o conteúdo seja adaptado ao idioma do usuário.
-
-## Objetivo
-
-O objetivo principal desse projeto é criar uma plataforma altamente funcional que ajude a **estrategista digital** a atrair clientes, compartilhar conteúdo relevante e permitir uma interação direta e eficiente com seus visitantes.
+## Estrutura do Projeto
