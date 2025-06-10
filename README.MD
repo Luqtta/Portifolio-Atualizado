@@ -1,6 +1,6 @@
 # Portfólio de Lucas Morais Souza
 
-Este projeto é um **portfólio profissional desenvolvido para Lucas Morais Souza**, com o objetivo de apresentar suas habilidades, experiências, projetos e serviços de forma moderna, interativa e responsiva. O site oferece uma experiência multilíngue, adaptando automaticamente o idioma conforme a preferência do usuário.
+Este projeto é um **portfólio profissional**, com o objetivo de apresentar suas habilidades, experiências, projetos e serviços de forma moderna, interativa e responsiva. O site oferece uma experiência multilíngue, adaptando automaticamente o idioma conforme a preferência do usuário.
 
 ## Tecnologias Utilizadas
 
