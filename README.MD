@@ -31,4 +31,3 @@ Este projeto é um **portfólio profissional desenvolvido para Lucas Morais Souz
 
 ![Preview Mobile](https://github.com/user-attachments/assets/3f7387d3-7d2f-4a6c-9a49-18fcbb938ac9)
 
-## Estrutura do Projeto
