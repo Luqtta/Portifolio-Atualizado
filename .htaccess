@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirecionar /en para en.html
+RewriteRule ^en/?$ /en.html [L]
+
+# Redirecionar /pt para pt.html
+RewriteRule ^pt/?$ /pt.html [L]
+
+# Redirecionar a página principal para index.html
+RewriteRule ^$ /index.html [L]

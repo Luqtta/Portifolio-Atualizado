@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "i18next": "^24.2.3",
+    "react": "^19.0.0",
+    "react-i18next": "^15.4.1",
+    "tailwindcss": "^4.0.13"
+  }
+}

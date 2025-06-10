@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio do desenvolvedor web Lucas Morais Souza">
+    <meta name="author" content="Lucas Morais Souza">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/output.css">
+    
+    <title>Lucas Morais Souza - Portfólio</title>
+    
+    <style>
+        .circle-grow {
+            animation: growCircle 1s ease-in-out forwards;
+            transform: scale(0.5);
+            position: relative;
+        }
+
+        @keyframes growCircle {
+            0% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .circle-grow:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); 
+        }
+
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            opacity: 0;
+            transform: translateX(-50px); 
+            transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .circle-grow:hover + .text-container {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #185adb ;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4575ab;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #185adb  #f1f1f1;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#181920] text-white fade-up">
+    <section class="min-h-[70vh] flex flex-col justify-center items-center bg-[#181920] px-4">
+        <div class="max-w-6xl w-full flex flex-col lg:flex-row items-center justify-center gap-20 py-16 mx-auto">
+            <!-- Foto de perfil -->
+            <div class="flex-shrink-0 flex flex-col justify-center items-center w-full lg:w-auto group">
+                <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#185adb] shadow-xl">
+                    <img src="src/images/imagem-lucas.png" alt="Lucas Morais Souza"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:brightness-90">
+                </div>
+                <span class="mt-4 text-lg font-semibold text-white fade-up" style="transition-delay: 80ms;">
+                    Lucas Morais Souza
+                </span>
+            </div>
+            <!-- Texto e ações -->
+        <span class="uppercase tracking-widest text-[#185adb] text-xs font-semibold mb-2 flex items-center gap-2 fade-up relative" style="transition-delay: 0ms;">
+            <span class="absolute left-0 -top-2 w-2 h-2 bg-[#185adb] rounded-full animate-pulse"></span>
+            <span class="relative z-10">
+                <span class="bg-[#1737fa]/20 px-2 py-1 rounded shadow text-[#185adb] border border-[#185adb] font-bold tracking-wider">
+                    Desenvolvedor
+                </span>
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 mt-4 leading-tight fade-up" style="transition-delay: 100ms;">
+                    Desenvolvedor com experiências em<br>
+                    <span class="bg-gradient-to-r from-[#185adb]/80 via-white/80 to-[#185adb]/80 bg-clip-text text-transparent font-bold">
+                        JavaScript, CSS, HTML e ReactJS
+                    </span>
+                </h1>
+                <p class="text-gray-400 mb-4 max-w-xl">
+                    Meu nome é Lucas Morais Souza, tenho 16 anos e atuo na área de desenvolvimento web há mais de 1 ano. Possuo experiência como Desenvolvedor Full Stack, criando soluções modernas, escaláveis e de alta performance.
+                </p>
+                <p class="text-gray-400 mb-8 max-w-xl">
+                    Logo abaixo você encontra meu currículo com informações detalhadas sobre mim. Se preferir, podemos marcar uma reunião ou conversar por e-mail ou WhatsApp.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start fade-up" style="transition-delay: 400ms;">
+                    <a href="src/docs/CV-LucasMoraisSouza.pdf" download
+                       class="px-6 py-2 bg-[#1737fa] text-white font-semibold rounded-md shadow hover:bg-[#0f1e6a] hover:scale-105 hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#1737fa]">
+                        <i class='bx bx-download text-lg'></i>
+                        Baixar CV
+                    </a>
+                    <button id="copyEmailIntro"
+                        class="px-6 py-2 font-semibold rounded-md bg-white text-black hover:bg-[#1737fa] hover:text-white hover:scale-105 hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-[#1737fa]">
+                        <i class='bx bx-envelope text-lg'></i>
+                        Copiar email
+                    </button>
+                </div>
+            <!-- Redes sociais topo -->
+            <div class="flex flex-col items-center lg:items-start mt-8 fade-up" style="transition-delay: 500ms;">
+                <div class="flex flex-col items-center">
+                    <span class="text-2xl text-white font-bold mb-2 uppercase tracking-widest text-center">Contato</span>
+                    <div class="flex gap-4 justify-center">
+                        <a href="https://www.instagram.com/luqtta_/" target="_blank" rel="noopener noreferrer"
+                        class="text-[#185adb] hover:text-white text-4xl transition-colors">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://github.com/Luqtta" target="_blank" rel="noopener noreferrer"
+                        class="text-[#185adb] hover:text-white text-4xl transition-colors">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucas-morais-souza-a5b599317/" target="_blank" rel="noopener noreferrer"
+                        class="text-[#185adb] hover:text-white text-4xl transition-colors">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <section class="py-16 px-4 sm:px-6 bg-[#181920]">
+        <div class="max-w-6xl mx-auto relative">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Skills & Experiência</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Experiência sólida em desenvolvimento web, com domínio em tecnologias modernas e foco em entregar soluções robustas e intuitivas.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Skills Técnicas -->
+                <div class="space-y-8">
+                    <div class="bg-[#23242a] border border-[#44454f] p-8 rounded-2xl shadow-lg h-full">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="flex items-center justify-center w-12 h-12 bg-[#185adb] rounded-md">
+                                <i class='bx bx-code-alt text-2xl text-white'></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Skills Técnicas</h3>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Card 1 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bxl-html5 text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">HTML5 & CSS3</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Web semântica e responsiva</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bxl-javascript text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">JavaScript & TypeScript</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Front-end dinâmico</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bxl-react text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">React.js</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">SPA, hooks e componentes</p>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bxl-nodejs text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Node.js & Express</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">APIs RESTful e backend</p>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bxl-python text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Python</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Scripts, automação e análise</p>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bxl-c-plus-plus text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">C#</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">.NET, WPF, Windows Apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="space-y-8">
+                    <div class="bg-[#23242a] border border-[#44454f] p-8 rounded-2xl shadow-lg h-full">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="flex items-center justify-center w-12 h-12 bg-[#185adb] rounded-md">
+                                <i class='bx bx-user-voice text-2xl text-white'></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Soft Skills</h3>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Card 1 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bx-bulb text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Resolução de Problemas</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Pensamento lógico</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bx-group text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Trabalho em Equipe</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Colaboração e comunicação</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bx-rocket text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Proatividade</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Iniciativa e liderança</p>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bx-calendar text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Organização</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Gestão de tempo</p>
+                                </div>
+                            </div>
+                            <!-- Card 5 - Aprendizado Rápido -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bx-brain text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Aprendizado Rápido</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Adaptação a novas tecnologias</p>
+                                </div>
+                            </div>
+                            <!-- Card 6 - Comunicação -->
+                            <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                                <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                    <i class='bx bx-chat text-lg text-white group-hover:text-[#185adb]'></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white group-hover:text-white">Comunicação</h4>
+                                    <p class="text-sm text-gray-400 group-hover:text-white">Clareza e objetividade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ferramentas -->
+            <div class="flex justify-center mt-16">
+                <div class="bg-[#23242a] border border-[#44454f] p-8 rounded-2xl shadow-lg w-full max-w-3xl h-full">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="flex items-center justify-center w-12 h-12 bg-[#185adb] rounded-md">
+                            <i class='bx bx-cog text-2xl text-white'></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Ferramentas</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Card 1 -->
+                        <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                            <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                <i class='bx bxl-git text-lg text-white group-hover:text-[#185adb]'></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white group-hover:text-white">Git & GitHub</h4>
+                                <p class="text-sm text-gray-400 group-hover:text-white">Controle de versão</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                            <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                <i class='bx bxl-visual-studio text-lg text-white group-hover:text-[#185adb]'></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white group-hover:text-white">VS Code</h4>
+                                <p class="text-sm text-gray-400 group-hover:text-white">IDE principal</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                            <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                <i class='bx bx-terminal text-lg text-white group-hover:text-[#185adb]'></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white group-hover:text-white">Terminal & CLI</h4>
+                                <p class="text-sm text-gray-400 group-hover:text-white">Automação e scripts</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="flex items-start gap-3 bg-[#23242a] border border-[#44454f] rounded-xl p-4 transition-all duration-200 hover:bg-[#185adb] hover:border-[#185adb] hover:shadow-lg group cursor-pointer">
+                            <div class="w-8 h-8 flex items-center justify-center bg-[#185adb] rounded-md transition-all duration-200 group-hover:bg-white">
+                                <i class='bx bxl-figma text-lg text-white group-hover:text-[#185adb]'></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white group-hover:text-white">Figma</h4>
+                                <p class="text-sm text-gray-400 group-hover:text-white">Prototipagem UI/UX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Adicionei a seção de Projetos aqui -->
+    <section class="py-16 px-4 sm:px-6 bg-[#181920]">
+        <div class="max-w-6xl mx-auto relative">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Projetos</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Alguns dos meus principais projetos. Clique para ver mais detalhes!
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Card Projeto 1 -->
+                <a href="https://kellycristinaadv.com.br" target="_blank" rel="noopener noreferrer"
+                   class="group bg-[#23242a] border border-[#44454f] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col items-center hover:border-[#185adb] w-full max-w-xl mx-auto">
+                    <img src="src/images/projeto1.png" alt="Projeto 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" style="max-width:600px;">
+                    <div class="p-4 w-full text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Site para uma Advogada Previdenciária</h3>
+                        <p class="text-gray-400">É um site institucional desenvolvido para uma advogada previdenciária, com o objetivo de oferecer informações, serviços e canais de contato de forma moderna, responsiva e acessível.</p>
+                    </div>
+                </a>
+                <!-- Card Projeto 2 -->
+                <a href="https://yasmimbusiness.netlify.app" target="_blank" rel="noopener noreferrer"
+                   class="group bg-[#23242a] border border-[#44454f] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col items-center hover:border-[#185adb] w-full max-w-xl mx-auto">
+                    <img src="src/images/projeto2.png" alt="Projeto 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" style="max-width:600px;">
+                    <div class="p-4 w-full text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Site para uma Estrategista Digital</h3>
+                        <p class="text-gray-400">Site institucional para uma **estrategista digital**, focado em apresentar serviços de consultoria, atrair clientes e oferecer uma experiência moderna, responsiva e multilíngue com tecnologias como Tailwind CSS, JavaScript e Node.js</p>
+                    </div>
+                </a>
+                <!-- Card Projeto 3 -->
+                <a href="https://thalitalima.netlify.app" target="_blank" rel="noopener noreferrer"
+                   class="group bg-[#23242a] border border-[#44454f] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col items-center hover:border-[#185adb] w-full max-w-xl mx-auto">
+                    <img src="src/images/projeto3.png" alt="Projeto 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" style="max-width:600px;">
+                    <div class="p-4 w-full text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Site para uma Editora de Vídeos</h3>
+                        <p class="text-gray-400">Site moderno e responsivo criado para uma editora de vídeo, com foco em divulgar serviços e portfólio de forma profissional. Utiliza HTML, CSS e JavaScript básico, com layout adaptável e identidade visual marcante para atrair novos clientes.</p>
+                    </div>
+                </a>
+                <!-- Card Projeto 4 -->
+                <a href="https://github.com/Luqtta/LS-OPTIMIZER" target="_blank" rel="noopener noreferrer"
+                   class="group bg-[#23242a] border border-[#44454f] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col items-center hover:border-[#185adb] w-full max-w-xl mx-auto">
+                    <img src="src/images/projeto4.png" alt="Projeto 4" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" style="max-width:600px;">
+                    <div class="p-4 w-full text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Progama em c# de otimização geral e avançada do windows</h3>
+                        <p class="text-gray-400">LS OPTIMIZER é um aplicativo para otimização do Windows, desenvolvido em C# com WPF (.NET 6/7/8), que permite excluir arquivos temporários, melhorar a conexão com a internet e exibir o uso da memória do sistema. Possui interface simples, sistema de status, logs e suporte à automação por tempo configurável.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="">
+        <div class="w-full px-0 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Lucas Morais Souza</h3>
+                    <p class="text-gray-400 mb-4">Desenvolvedor Full Stack apaixonado por tecnologia, inovação e soluções digitais de alto impacto.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/luqtta_/" class="text-gray-400 hover:text-[#00e6fb] transition-colors transform hover:scale-110">
+                            <i class='bx bxl-instagram text-4xl'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucas-morais-souza-a5b599317/" class="text-gray-400 hover:text-[#00e6fb] transition-colors transform hover:scale-110">
+                            <i class='bx bxl-linkedin text-4xl'></i>
+                        </a>
+                        <button id="copyEmail" class="text-gray-400 hover:text-[#00e6fb] transition-colors transform hover:scale-110" aria-label="Copiar email">
+                            <i class='bx bx-envelope text-4xl'></i>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Serviços Oferecidos</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <span class="text-gray-400 hover:text-[#00e6fb] cursor-pointer transform hover:scale-110 transition-all">Desenvolvimento Web</span>
+                        </li>
+                        <li>
+                            <span class="text-gray-400 hover:text-[#00e6fb] cursor-pointer transform hover:scale-110 transition-all">Desenvolvimento Responsivo</span>
+                        </li>
+                        <li>
+                            <span class="text-gray-400 hover:text-[#00e6fb] cursor-pointer transform hover:scale-110 transition-all">APIs e Integrações</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contato</h3>
+                    <p class="text-gray-400 mb-2">Vamos trabalhar juntos? Entre em contato!</p>
+                    <a href="https://wa.me/62995189743?text=Oi%20Lucas%2C%20gostaria%20de%20falar%20sobre%20um%20projeto%20web"
+                       class="inline-flex items-center text-[#00e6fb] hover:text-white transition-colors">
+                        <i class='bx bx-send mr-2'></i>
+                        <span>Enviar mensagem</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 px-6">
+                <p class="text-center text-gray-400">
+                    © 2025 Lucas Morais Souza
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button 
+        id="backToTop" 
+        class="fixed bottom-8 right-8 bg-[#185adb] text-white p-4 rounded-full shadow-lg hover:bg-[#103a7c] hover:shadow-xl transition-all duration-300 opacity-0 pointer-events-none"
+        aria-label="Voltar ao topo">
+        <i class='bx bx-up-arrow-alt text-2xl'></i>
+    </button>
+
+    <div id="toastMessage" class="fixed bottom-24 right-8 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg opacity-0 invisible transition-all duration-300">
+        Email copiado! 📋
+    </div>
+    <script src="./src/javascript/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</body>
+</html>
