@@ -25,10 +25,10 @@ Este projeto é um **portfólio profissional desenvolvido para Lucas Morais Souz
 
 ## Preview
 
-![Preview Desktop](https://github.com/user-attachments/assets/83f1be75-67ff-470f-8430-70a29fa55412))
+![Preview Desktop](https://github.com/user-attachments/assets/83f1be75-67ff-470f-8430-70a29fa55412)
 
 ## Preview Responsivo
 
-![Preview Mobile](https://github.com/user-attachments/assets/d533ee9d-cba2-4bcc-91f4-870848c40d3f)
+![Preview Mobile](https://github.com/user-attachments/assets/3f7387d3-7d2f-4a6c-9a49-18fcbb938ac9)
 
 ## Estrutura do Projeto
