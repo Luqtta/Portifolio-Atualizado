@@ -13,7 +13,7 @@ function loadLanguageFile() {
 
     if (!currentLang) {
         if (userLang.startsWith('pt-br')) {
-            window.location.href = '/pt';
+            window.location.href = '/pt-br';
         } else {
             window.location.href = '/en';
         }
